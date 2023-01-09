@@ -37,7 +37,7 @@ const MovieItem = ({ movie }) => {
             <p>Release Date: {movie.release_date}</p>
             <p>User Score: {`${movie.vote_average*10}%`}</p>
             <div className='buttons'>
-              <Link to={'/MovieDB/movie/' + movie.id}><button>More Info</button></Link>
+              <Link to={'/movie/' + movie.id}><button>More Info</button></Link>
               {ifMovieInFavourites(movie) ? 
               <button onClick={() => {handleClick(movie, 'remove')}}>Remove from Favourites</button> 
               : <button onClick={() => {handleClick(movie, 'add')}}>Add to Favourites</button>}

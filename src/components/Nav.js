@@ -18,9 +18,9 @@ const Nav = () => {
         <span className="bar"></span>
       </div>
       <nav className='nav-bar'>
-        <Link to='/MovieDB' className={`nav-item ${toggle ? "active" : ""}`}><p>Home</p></Link>
-        <Link to='/MovieDB/favourites' className={`nav-item ${toggle ? "active" : ""}`}><p>Favourites</p></Link>
-        <Link to='/MovieDB/about' className={`nav-item ${toggle ? "active" : ""}`}><p>About</p></Link>
+        <Link to='/' className={`nav-item ${toggle ? "active" : ""}`}><p>Home</p></Link>
+        <Link to='/favourites' className={`nav-item ${toggle ? "active" : ""}`}><p>Favourites</p></Link>
+        <Link to='/about' className={`nav-item ${toggle ? "active" : ""}`}><p>About</p></Link>
         {/* <Link to=''></Link> */}
       </nav>
     </>
