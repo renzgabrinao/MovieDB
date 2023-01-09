@@ -1,4 +1,4 @@
-import { HashRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { useEffect, useState } from 'react'
 import '../styles/App.css';
 
@@ -27,7 +27,6 @@ function App() {
   }, [])
 
   return (
-    <HashRouter basename="/">
       <div className="App">
         <SearchContext.Provider value={{ search, setSearch }}>
         <FavouriteContext.Provider value={{ favourites, setFavourites }}>
@@ -45,8 +44,9 @@ function App() {
         </FavouriteContext.Provider>
         </SearchContext.Provider>
       </div>
-    </HashRouter>
   );
 }
 
 export default App;
+
+

@@ -26,6 +26,8 @@ const Home = () => {
     loadMovies();
   }, [search]);
 
+  console.log(list)
+
   const handleFilter = (method, value) => {
     switch(method) {
       case 'filter':
