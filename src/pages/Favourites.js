@@ -11,7 +11,7 @@ const Favourites = () => {
     console.log(favourites)
     return (
         <>
-          <Link to="/"><img src={button} alt='Back Button' className='back-button'/></Link>
+          <Link to="/moviedb"><img src={button} alt='Back Button' className='back-button'/></Link>
           <div className='movie-list'>
             {favourites.length === 0 ? 
               <>

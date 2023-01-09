@@ -1,11 +1,14 @@
 // movie detail page
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
+import { ifMovieInFavourites, addToLocalStorage, removeFromLocalStorage, getFavouriteMovies } from '../data/utilities';
+import FavouriteContext from '../contexts/FavouriteContext'
 
 const MOVIE_DB_API_KEY = process.env.REACT_APP_MOVIE_DB_API_KEY;
 
 const MovieDetail = () => { 
 
+    const { setFavourites } = useContext(FavouriteContext);
     const { movieId } = useParams();
     const [ movie, setMovie ] = useState("");
 
@@ -19,15 +22,37 @@ const MovieDetail = () => {
 
     }, [movieId])
 
+    const handleClick = (movie, method) => {
+      switch(method) {
+          case 'add':
+              addToLocalStorage(movie)
+              break;
+          case 'remove':
+              removeFromLocalStorage(movie);
+              break;
+          default:
+              break;
+      }
+      let favs = getFavouriteMovies();
+      setFavourites(favs);
+  }
+
     return (
         <>
-            <div className='main movie-details'>
+            <div className='main movie-details' sstyle={{
+              backgroundImage: `url("https://image.tmdb.org/t/p/original${movie.poster_path}")`
+            }}>
                 <img className='poster-img' src={'https://image.tmdb.org/t/p/original' + movie.poster_path} alt={'Poster for ' + movie.original_title}/>
                 <span className='movie-info'>
                     <h2 className='movie-detail-title info'>{movie.original_title}</h2>
                     <p className='release-date info'>Release Date: {movie.release_date}</p>
                     <p className='rating info'>User Score: {`${Math.round(movie.vote_average*10)}%`}</p>
                     <article className='movie-overview info'>{movie.overview}</article>
+                    <div className='buttons'>
+                      {ifMovieInFavourites(movie) ? 
+                      <button onClick={() => {handleClick(movie, 'remove')}}>Remove from Favourites</button> 
+                      : <button onClick={() => {handleClick(movie, 'add')}}>Add to Favourites</button>}
+                    </div>
                 </span>
             </div>
         </>

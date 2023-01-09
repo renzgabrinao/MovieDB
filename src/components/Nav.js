@@ -1,15 +1,30 @@
 // nav page
 import { Link } from "react-router-dom";
+import { useState } from 'react'
 
 const Nav = () => {
-    return (
-        <nav className="nav-bar">
-            <Link to='/' className="nav-item">Home</Link>
-            <Link to='/favourites' className="nav-item">Favourites</Link>
-            <Link to='/about' className="nav-item">About</Link>
-            {/* <Link to=''></Link> */}
-        </nav>
-    )
+
+  // const navbarLinks = document.getElementsByClassName('nav-item')
+  const [ toggle, setToggle ] = useState(false)
+
+
+  console.log(toggle)
+
+  return (
+    <>
+      <div className="toggle-button" onClick={() => {setToggle(!toggle)}}>
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="bar"></span>
+      </div>
+      <nav className='nav-bar'>
+        <Link to='/moviedb' className={`nav-item ${toggle ? "active" : ""}`}><p>Home</p></Link>
+        <Link to='/moviedb/favourites' className={`nav-item ${toggle ? "active" : ""}`}><p>Favourites</p></Link>
+        <Link to='/moviedb/about' className={`nav-item ${toggle ? "active" : ""}`}><p>About</p></Link>
+        {/* <Link to=''></Link> */}
+      </nav>
+    </>
+  )
 }
 
 export default Nav

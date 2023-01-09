@@ -32,7 +32,6 @@ body {
 }
 
 .nav-bar {
-  width: 30%;
   display: flex;
   flex-flow: row nowrap;
   justify-content: space-between;
@@ -45,10 +44,15 @@ body {
   color: #a7d7ff;
   font-weight: 700;
   font-size: 2em;
+  margin-left: 20px;
 }
 
 .nav-item:hover {
   color: #d3ebff;
+}
+
+.nav-item p {
+  margin: 0;
 }
 
 .back-button {
@@ -75,11 +79,15 @@ footer p { margin: 0; }
 .filter {
   display: flex;
   flex-flow: row nowrap;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   align-items: center;
-  width: 45%;
+  /* width: 45%; */
   margin-bottom: 30px;
   font-size: 1.5em;
+}
+
+.filter-item {
+  margin-left: 30px;
 }
 
 .filter select {
@@ -143,6 +151,37 @@ footer p { margin: 0; }
 
 .links { color: #d3ebff; }
 .links:hover { color: #a7d7ff }
+
+/* movie detail page styles */
+
+.main .movie-details {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.movie-info {
+  width: 500px;
+  height: 650px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+  align-self: center;
+  padding: 30px;
+  text-align: center;
+}
+
+.movie-info h2 { font-size: 2.2em; }
+.movie-info p { font-size: 1.5em; }
+
+.poster-img {
+  width: 500px;
+  object-fit: contain;
+}
+
+.detail-buttons {
+  flex-flow: row nowrap;
+}
 
 /* movie item styles */
 
@@ -255,6 +294,78 @@ footer p { margin: 0; }
   outline: 0;
 }
 
+.toggle-button {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 50px;
+  height: 30px;
+}
+
+.toggle-button .bar {
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  border-radius: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .label {
+    display: none;
+  }
+
+  .filter {
+    flex-flow: column nowrap;
+  }
+  
+  .filter-item {
+    margin: 10px 0;
+  }
+
+  .toggle-button {
+    display: flex;
+  }
+
+  .nav-item {
+    display: none;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nav-bar {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .nav-item {
+    width: 100%;
+    text-align: right;
+    padding: .5rem 1rem;
+  }
+
+  .nav-item p {
+    margin-left: auto;
+  }
+
+  .nav-item.active {
+    display: flex;
+    margin: 0;
+  }
+
+  .no-movies h2 {
+    font-size: 1.1em;
+  }
+
+  .back-button {
+    width: 50px;
+  }
+}
 
 
 

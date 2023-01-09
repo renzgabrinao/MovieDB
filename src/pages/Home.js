@@ -42,16 +42,16 @@ const Home = () => {
   return (
     <>
       <div className='filter'>
-          <label>Show me: </label>
-          <select value={search.filter} onChange={(e) => {handleFilter('filter', e.target.value)}}>
+          <label className='filter-item label'>Show me: </label>
+          <select className='filter-item' value={search.filter} onChange={(e) => {handleFilter('filter', e.target.value)}}>
             <option value='popular'>Popular</option>
             <option value='top_rated'>Top Rated</option>
             <option value='now_playing'>Now Playing</option>
             <option value='upcoming'>Upcoming</option>
           </select>
 
-          <label>or</label>
-          <input className="search-bar" type='text' name='search' value={search.search} placeholder='Search Movie...' onChange={(e) => {handleFilter('search', e.target.value)}}/>   
+          <label className='filter-item label'>or</label>
+          <input className="search-bar filter-item" type='text' name='search' value={search.search} placeholder='Search Movie...' onChange={(e) => {handleFilter('search', e.target.value)}}/>   
       </div>
 
       <div className='movie-list'>
