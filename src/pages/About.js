@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 const About = () => {
   return (
     <>
-      <Link to="/moviedb"><img src={button} alt='Back Button' className='back-button'/></Link>
+      <Link to="/MovieDB"><img src={button} alt='Back Button' className='back-button'/></Link>
       <div className='about-container'>
         <h1>Welcome to MovieDB!</h1>
         <span className='about-info'>

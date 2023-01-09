@@ -34,11 +34,11 @@ function App() {
           <Header/>
             <main className="main">
             <Routes>
-              <Route path="/moviedb" element={<Home/>}/>
-              <Route path="/moviedb/favourites" element={<Favourites/>}/>
-              <Route path="/moviedb/about" element={<About/>}/>
-              <Route path="/moviedb/movie/:movieId" element={<MovieDetail/>}/>
-              <Route path="/moviedb/*" element={<PageNotFound/>}/>
+              <Route path="/MovieDB" element={<Home/>}/>
+              <Route path="/MovieDB/favourites" element={<Favourites/>}/>
+              <Route path="/MovieDB/about" element={<About/>}/>
+              <Route path="/MovieDB/movie/:movieId" element={<MovieDetail/>}/>
+              <Route path="/MovieDB/*" element={<PageNotFound/>}/>
             </Routes>
             </main>
           <Footer/>

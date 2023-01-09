@@ -70,14 +70,6 @@ const Home = () => {
             ))}
           </>
         }
-
-
-
-        {list.map((movie) => (
-          <div key={movie.id.toString()}>
-            <MovieItem movie={movie}/>
-          </div>
-        ))}
       </div>
     </>
   )
