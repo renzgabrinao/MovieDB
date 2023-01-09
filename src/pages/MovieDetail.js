@@ -39,8 +39,12 @@ const MovieDetail = () => {
 
     return (
         <>
-            <div className='main movie-details' sstyle={{
-              backgroundImage: `url("https://image.tmdb.org/t/p/original${movie.poster_path}")`
+            <div className='movie-details' style={{
+              backgroundImage: `url("https://image.tmdb.org/t/p/original${movie.poster_path}")`,
+              backgroundPosition: 'center',
+              objectFit: 'cover',
+              backgroundColor: 'rgba(0,0,0,0.85)',
+              backgroundBlendMode:'multiply'
             }}>
                 <img className='poster-img' src={'https://image.tmdb.org/t/p/original' + movie.poster_path} alt={'Poster for ' + movie.original_title}/>
                 <span className='movie-info'>
