@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { useEffect, useState } from 'react'
 import '../styles/App.css';
 
@@ -27,7 +27,7 @@ function App() {
   }, [])
 
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className="App">
         <SearchContext.Provider value={{ search, setSearch }}>
         <FavouriteContext.Provider value={{ favourites, setFavourites }}>
@@ -45,7 +45,7 @@ function App() {
         </FavouriteContext.Provider>
         </SearchContext.Provider>
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
