@@ -27,7 +27,7 @@ function App() {
   }, [])
 
   return (
-    <HashRouter>
+    <HashRouter basename="/">
       <div className="App">
         <SearchContext.Provider value={{ search, setSearch }}>
         <FavouriteContext.Provider value={{ favourites, setFavourites }}>
