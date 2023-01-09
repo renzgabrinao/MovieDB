@@ -1,0 +1,265 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+
+/* background color: #21386b */
+
+/* box sizing reset */
+
+html {
+  box-sizing: border-box;
+  background-image: linear-gradient(to right, #21386b, #17344b);
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.main {
+  min-height: 100vh;
+  margin: 20px 5% 20px 5%;
+  color: #d3ebff;
+}
+
+/* header styles */
+
+.header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  margin: 10px 5% 0px 5%;
+}
+
+.nav-bar {
+  width: 30%;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+  color: #a7d7ff;
+  font-weight: 700;
+  font-size: 2em;
+}
+
+.nav-item:hover {
+  color: #d3ebff;
+}
+
+.back-button {
+  width: 100px;
+}
+
+/* footer styles */
+
+footer {
+  display: flex;
+  flex-flow: row nowrap;
+  color: #d3ebff;
+  justify-content: center;
+  margin: 30px 0 30px 0;
+  font-size: 1.3em;
+}
+
+footer a { color: #d3ebff; }
+footer a:hover { text-decoration: underline; color: white; }
+footer p { margin: 0; }
+
+/* home page styles */
+
+.filter {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 45%;
+  margin-bottom: 30px;
+  font-size: 1.5em;
+}
+
+.filter select {
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  padding: 0;
+  border: none;
+  background-color: #17344b;
+  color: #d3ebff;
+}
+
+::placeholder { color: #d3ebff; opacity: 1; }
+
+.search-bar {
+  width: 325px;
+  height: 40px;
+  border: none;
+  text-align: center;
+  padding: 0;
+  background-color: #17344b;
+  color: #d3ebff;
+}
+
+/* favourites page styles */
+
+.no-movies {
+  font-size: 2em;
+  width: 60%;
+  text-align: center;
+}
+
+/* about page styles */
+
+.about-container {
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+}
+
+.about-info {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  text-align: left;
+}
+
+.about-tmdb, .about-dev {
+  width: 400px;
+}
+
+.about-tmdb {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+.tmdb-logo {
+  width: 200px;
+  object-fit: contain;
+}
+
+.links { color: #d3ebff; }
+.links:hover { color: #a7d7ff }
+
+/* movie item styles */
+
+.movie-list {
+  display: flex;
+  flex-flow: row wrap;
+  gap: 30px 30px;
+  justify-content: space-evenly;
+  min-height: 100vh;
+}
+
+.movie-item {
+  width: 450px;
+  height: 400px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-around;
+  text-align: center;
+  border: 1px solid lightblue;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.movie-item-details {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.movie-item-details h2, .movie-item-details p {
+  margin: 0;
+}
+
+.movie-item-details img {
+  width: 200px;
+  object-fit: contain;
+}
+
+.movie-item-details span {
+  width: 225px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-evenly;
+}
+
+.movie-description {
+  width: 75%;
+  align-self: center;
+}
+
+.buttons {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+
+/* button styles from https://getcssscan.com/css-buttons-examples */
+.buttons button {
+  margin-bottom: 10px;
+  align-items: center;
+  background-color: #fee6e3;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #111;
+  cursor: pointer;
+  display: flex;
+  font-family: "Montserrat",sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 8px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.buttons button:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.buttons button:hover:after {
+  transform: translate(0, 0);
+}
+
+.buttons button:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.buttons button:hover {
+  outline: 0;
+}
+
+
+
+
+
+
+
+
+
