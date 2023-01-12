@@ -1,0 +1,21 @@
+/* footer styles */
+
+footer {
+  display: flex;
+  flex-flow: row nowrap;
+  color: #d3ebff;
+  justify-content: center;
+  margin: 30px 0 30px 0;
+  font-size: 1.3em;
+}
+
+footer a {
+  color: #d3ebff;
+}
+footer a:hover {
+  text-decoration: underline;
+  color: white;
+}
+footer p {
+  margin: 0;
+}

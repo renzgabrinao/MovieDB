@@ -1,0 +1,56 @@
+/* nav bar styles */
+
+.nav-bar {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-item {
+  transition: all 0.3s ease 0s;
+  text-decoration: none;
+  color: #a7d7ff;
+  font-weight: 700;
+  font-size: 2em;
+  margin-left: 20px;
+}
+
+.nav-item:hover {
+  color: #d3ebff;
+}
+
+.nav-item p {
+  margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+  .nav-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transform: translateY(-25%);
+    width: 100%;
+    flex-direction: column;
+    transition: all 0.6s cubic-bezier(0.6, 0.02, 0.16, 0.97);
+  }
+
+  .nav-bar.active {
+    transform: translateY(75%);
+  }
+
+  .nav-item {
+    width: 100%;
+    text-align: right;
+    padding: 0.5rem 1rem;
+  }
+
+  .nav-item p {
+    margin-left: auto;
+  }
+
+  .nav-item.active {
+    display: flex;
+  }
+}
