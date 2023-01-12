@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/MovieDB/static/css/main.b0e903e0.css",
-    "main.js": "/MovieDB/static/js/main.9aa7f3ee.js",
+    "main.css": "/MovieDB/static/css/main.00aa5e4d.css",
+    "main.js": "/MovieDB/static/js/main.03eb9519.js",
     "static/js/787.5d5ea81f.chunk.js": "/MovieDB/static/js/787.5d5ea81f.chunk.js",
     "static/media/tmbd_logo.svg": "/MovieDB/static/media/tmbd_logo.de1a664e8d0777ca4ddb2a5a298bcfb6.svg",
     "index.html": "/MovieDB/index.html",
-    "main.b0e903e0.css.map": "/MovieDB/static/css/main.b0e903e0.css.map",
-    "main.9aa7f3ee.js.map": "/MovieDB/static/js/main.9aa7f3ee.js.map",
+    "main.00aa5e4d.css.map": "/MovieDB/static/css/main.00aa5e4d.css.map",
+    "main.03eb9519.js.map": "/MovieDB/static/js/main.03eb9519.js.map",
     "787.5d5ea81f.chunk.js.map": "/MovieDB/static/js/787.5d5ea81f.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b0e903e0.css",
-    "static/js/main.9aa7f3ee.js"
+    "static/css/main.00aa5e4d.css",
+    "static/js/main.03eb9519.js"
   ]
 }
