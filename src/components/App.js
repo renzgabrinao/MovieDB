@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { useEffect, useState } from 'react'
 import '../styles/App.css';
 
@@ -27,26 +27,26 @@ function App() {
   }, [])
 
   return (
-    <BrowserRouter>
       <div className="App">
         <SearchContext.Provider value={{ search, setSearch }}>
         <FavouriteContext.Provider value={{ favourites, setFavourites }}>
           <Header/>
             <main className="main">
             <Routes>
-              <Route path="/MovieDB" element={<Home/>}/>
-              <Route path="/MovieDB/favourites" element={<Favourites/>}/>
-              <Route path="/MovieDB/about" element={<About/>}/>
-              <Route path="/MovieDB/movie/:movieId" element={<MovieDetail/>}/>
-              <Route path="/MovieDB/*" element={<PageNotFound/>}/>
+              <Route path="/" element={<Home/>}/>
+              <Route path="/favourites" element={<Favourites/>}/>
+              <Route path="/about" element={<About/>}/>
+              <Route path="/movie/:movieId" element={<MovieDetail/>}/>
+              <Route path="/*" element={<PageNotFound/>}/>
             </Routes>
             </main>
           <Footer/>
         </FavouriteContext.Provider>
         </SearchContext.Provider>
       </div>
-    </BrowserRouter>
   );
 }
 
 export default App;
+
+
