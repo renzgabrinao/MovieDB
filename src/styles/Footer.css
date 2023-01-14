@@ -1,21 +1,27 @@
 /* footer styles */
 
 footer {
-  display: flex;
-  flex-flow: row nowrap;
-  color: #d3ebff;
-  justify-content: center;
-  margin: 30px 0 30px 0;
-  font-size: 1.3em;
+	display: flex;
+	flex-flow: row nowrap;
+	color: #d3ebff;
+	justify-content: center;
+	margin: 30px 0 30px 0;
+	font-size: 1.3em;
 }
 
 footer a {
-  color: #d3ebff;
+	color: #d3ebff;
 }
 footer a:hover {
-  text-decoration: underline;
-  color: white;
+	text-decoration: underline;
+	color: white;
 }
 footer p {
-  margin: 0;
+	margin: 0;
+}
+
+@media only screen and (max-width: 768px) {
+	footer {
+		font-size: 12px;
+	}
 }
