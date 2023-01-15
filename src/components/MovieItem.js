@@ -44,15 +44,17 @@ const MovieItem = ({ movie }) => {
 				<span>
 					<h2>{movie.original_title}</h2>
 					<p>Release Date: {movie.release_date}</p>
-
-					<StarRatings
-						rating={movie.vote_average / 2}
-						starRatedColor="yellow"
-						numberOfStars={5}
-						name="rating"
-						starDimension="30px"
-						starSpacing="1px"
-					/>
+					<div className="rating">
+						<StarRatings
+							rating={movie.vote_average / 2}
+							starRatedColor="yellow"
+							numberOfStars={5}
+							name="rating"
+							starDimension="30px"
+							starSpacing="1px"
+						/>
+						<p>{movie.vote_average * 10}%</p>
+					</div>
 
 					<div className="buttons">
 						<Link to={'/movie/' + movie.id}>

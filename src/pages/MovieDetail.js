@@ -75,14 +75,17 @@ const MovieDetail = () => {
 					<h3>Release Date: {movie.release_date}</h3>
 					{movie.vote_average ? (
 						<>
-							<StarRatings
-								rating={movie.vote_average / 2}
-								starRatedColor="yellow"
-								numberOfStars={5}
-								name="rating"
-								starDimension="30px"
-								starSpacing="1px"
-							/>
+							<div className="rating">
+								<StarRatings
+									rating={movie.vote_average / 2}
+									starRatedColor="yellow"
+									numberOfStars={5}
+									name="rating"
+									starDimension="30px"
+									starSpacing="1px"
+								/>
+								<p>{movie.vote_average * 10}%</p>
+							</div>
 						</>
 					) : (
 						<></>
