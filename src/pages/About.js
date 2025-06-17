@@ -22,12 +22,12 @@ const About = () => {
 							</p>
 							<p>
 								This application uses the
-								<a
+								&nbsp;<a
 									className="links"
 									href="https://developers.themoviedb.org/3/getting-started/introduction"
 								>
 									TMDB API
-								</a>
+								&nbsp;</a>
 								but is not endorsed or certified by TMDB
 							</p>
 						</section>
@@ -41,7 +41,7 @@ const About = () => {
 					<article className="about-dev">
 						<h2>About the developer</h2>
 						<p>
-							MovieDB is a React JS application made by
+							MovieDB is a React JS application made by&nbsp;
 							<a className="links" href="https://github.com/renzgabrinao">
 								Renz Gabrinao
 							</a>

@@ -53,7 +53,7 @@ const MovieItem = ({ movie }) => {
 							starDimension="30px"
 							starSpacing="1px"
 						/>
-						<p>{movie.vote_average * 10}%</p>
+						<p>{(movie.vote_average * 10).toFixed(2)}%</p>
 					</div>
 
 					<div className="buttons">
